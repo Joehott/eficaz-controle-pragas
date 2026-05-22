@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Eficaz Controle de Pragas | Dicas, Prevenção e Saúde</title>
+<meta name="description" content="Artigos técnicos sobre controle de pragas, prevenção, higiene e saúde para sua casa e empresa. Conteúdo especializado da Eficaz — Manhuaçu MG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* =============================================
+   RESET & VARIÁVEIS
+   ============================================= */
+:root {
+  --bg-base:        #030E05;
+  --bg-surface:     #061508;
+  --bg-elevated:    #0d2812;
+  --bg-glass:       rgba(255,255,255,0.04);
+  --bg-glass-hover: rgba(255,255,255,0.07);
+
+  --green:          #2ECC52;
+  --green-hover:    #40D962;
+  --green-soft:     rgba(46,204,82,0.13);
+  --green-glow:     rgba(46,204,82,0.26);
+  --green-border:   rgba(46,204,82,0.32);
+
+  --white:          #FFFFFF;
+  --text-primary:   #E8F5EC;
+  --text-secondary: #7AAF87;
+  --text-muted:     #3D6647;
+
+  --border:         rgba(255,255,255,0.07);
+  --border-strong:  rgba(255,255,255,0.13);
+  --danger:         #FC8181;
+  --success:        #68D391;
+
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.45);
+  --shadow-green: 0 0 28px rgba(46,204,82,0.28);
+  --shadow-btn:  0 4px 20px rgba(46,204,82,0.35);
+
+  --transition: 220ms ease;
+  --header-h:   68px;
+  --container:  1140px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-base);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+a { text-decoration: none; transition: color var(--transition); }
+
+/* =============================================
+   HEADER
+   ============================================= */
+#header {
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--header-h);
+  background: rgba(3,14,5,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+#header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-icon {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--green), #1a9e3a);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.logo-wordmark .name {
+  display: block;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.3px;
+}
+.logo-wordmark .tagline {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+#header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+#header nav a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+#header nav a:hover,
+#header nav a.active { color: var(--white); }
+#header nav a.active { color: var(--green); }
+.btn-primary {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, var(--green), var(--green-hover));
+  color: #030E05;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  box-shadow: var(--shadow-btn);
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(46,204,82,0.45);
+  color: #030E05;
+}
+
+/* =============================================
+   BREAKING BAR
+   ============================================= */
+.breaking-bar {
+  background: var(--green);
+  padding: 8px 0;
+  overflow: hidden;
+}
+.breaking-bar .inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.breaking-label {
+  background: #030E05;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.breaking-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #030E05;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.breaking-text a { color: #030E05; font-weight: 700; }
+
+/* =============================================
+   LAYOUT BASE (BLOG + SIDEBAR)
+   ============================================= */
+.site-main {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* =============================================
+   HERO FEATURED POST
+   ============================================= */
+.featured-post {
+  margin-bottom: 48px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 340px;
+  transition: all var(--transition);
+}
+.featured-post:hover { border-color: var(--green-border); box-shadow: var(--shadow-card); }
+.featured-post .thumb {
+  background: linear-gradient(135deg, #0d2812 0%, #061508 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+.featured-post .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
+.featured-post:hover .thumb img { transform: scale(1.03); }
+.featured-post .thumb .thumb-placeholder { display: flex; align-items: center; justify-content: center; opacity: 0.6; }
+.featured-post .content {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+.featured-post .content .cat-badge { align-self: flex-start; }
+.featured-post .content h2 {
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+.featured-post .content h2 a { color: var(--white); }
+.featured-post .content h2 a:hover { color: var(--green); }
+.featured-post .content .excerpt { font-size: 15px; color: var(--text-secondary); line-height: 1.65; }
+.featured-post .content .post-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.featured-post .content .read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green);
+  margin-top: 8px;
+}
+.featured-post .content .read-more:hover { color: var(--green-hover); }
+
+/* =============================================
+   SECTION TITLE
+   ============================================= */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.section-label h2 {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* =============================================
+   POSTS GRID
+   ============================================= */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.post-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 250ms ease;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+}
+.post-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-border);
+  box-shadow: var(--shadow-card);
+}
+.post-card .card-thumb {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #0d2812, #061508);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.post-card .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms ease; }
+.post-card:hover .card-thumb img { transform: scale(1.05); }
+.post-card .card-thumb .thumb-placeholder { display:flex; align-items:center; justify-content:center; opacity: 0.65; }
+.post-card .card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.post-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  flex: 1;
+}
+.post-card h3 a { color: var(--white); }
+.post-card h3 a:hover { color: var(--green); }
+.post-card .card-excerpt {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.post-card .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.read-time { display: flex; align-items: center; gap: 4px; }
+.read-more-link { font-size: 13px; font-weight: 700; color: var(--green); }
+.read-more-link:hover { color: var(--green-hover); }
+
+/* =============================================
+   CATEGORY BADGES
+   ============================================= */
+.cat-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.cat-badge.prevencao  { background: rgba(104,211,145,0.15); color: #68D391; border: 1px solid rgba(104,211,145,0.25); }
+.cat-badge.saude      { background: rgba(99,179,237,0.15);  color: #63B3ED; border: 1px solid rgba(99,179,237,0.25); }
+.cat-badge.legislacao { background: rgba(252,129,129,0.15); color: #FC8181; border: 1px solid rgba(252,129,129,0.25); }
+.cat-badge.tecnico    { background: rgba(46,204,82,0.13);   color: #2ECC52; border: 1px solid rgba(46,204,82,0.3); }
+.cat-badge.empresas   { background: rgba(246,173,85,0.15);  color: #F6AD55; border: 1px solid rgba(246,173,85,0.25); }
+.cat-badge.default    { background: var(--bg-glass); color: var(--text-secondary); border: 1px solid var(--border); }
+
+/* =============================================
+   PAGINATION
+   ============================================= */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-glass);
+  transition: all var(--transition);
+}
+.pagination a:hover { border-color: var(--green-border); color: var(--green); background: var(--green-soft); }
+.pagination .current { background: var(--green); color: #030E05; border-color: var(--green); font-weight: 800; }
+
+/* =============================================
+   SIDEBAR
+   ============================================= */
+.sidebar { display: flex; flex-direction: column; gap: 28px; }
+.widget {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+.widget-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.widget-cta {
+  background: var(--bg-elevated);
+  border: 1px solid var(--green-border);
+  position: relative;
+  overflow: hidden;
+}
+.widget-cta::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--green), var(--green-hover), transparent);
+}
+.widget-cta .widget-title { color: var(--green); border-color: var(--green-border); }
+.widget-cta p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+.widget-cta form { display: flex; flex-direction: column; gap: 10px; }
+.widget-cta input[type="text"],
+.widget-cta input[type="tel"],
+.widget-cta input[type="email"] {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: inherit;
+  transition: border-color var(--transition);
+}
+.widget-cta input:focus { outline: none; border-color: var(--green-border); }
+.widget-cta input::placeholder { color: var(--text-muted); }
+.widget-cta button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--green), var(--green-hover));
+  color: #030E05;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+.widget-cta button:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(46,204,82,0.4); }
+
+/* Recent posts */
+.recent-list { display: flex; flex-direction: column; gap: 14px; }
+.recent-item { display: flex; align-items: flex-start; gap: 12px; }
+.recent-item .thumb {
+  width: 48px; height: 48px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.recent-item .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.recent-item .info h4 { font-size: 13px; font-weight: 700; line-height: 1.4; margin-bottom: 4px; }
+.recent-item .info h4 a { color: var(--text-primary); }
+.recent-item .info h4 a:hover { color: var(--green); }
+.recent-item .info .meta { font-size: 11px; color: var(--text-muted); }
+
+/* Categories */
+.cat-list { display: flex; flex-direction: column; gap: 6px; }
+.cat-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+.cat-list-item:hover { border-color: var(--green-border); background: var(--green-soft); }
+.cat-list-item a { font-size: 13px; font-weight: 600; color: var(--text-secondary); flex: 1; }
+.cat-list-item:hover a { color: var(--green); }
+.cat-list-item .count {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 1px 7px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.site-footer {
+  background: #020A04;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 64px 0 28px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-brand p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 280px;
+  margin: 16px 0 20px;
+}
+.footer-social { display: flex; gap: 8px; }
+.footer-social a {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  transition: all var(--transition);
+}
+.footer-social a:hover { border-color: var(--green-border); color: var(--green); background: var(--green-soft); }
+.footer-col h4 {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a { font-size: 14px; color: var(--text-muted); transition: color var(--transition); }
+.footer-col ul li a:hover { color: var(--green); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.footer-bottom p { font-size: 12px; color: var(--text-muted); }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 1024px) {
+  .site-main { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .featured-post { grid-template-columns: 1fr; }
+  .featured-post .thumb { min-height: 200px; }
+  .posts-grid { grid-template-columns: 1fr; }
+  #header nav { display: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="container">
+    <a href="../index.html" class="header-logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#030E05" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <path d="M8 12s1.5-2 4-2 4 2 4 2"/>
+          <path d="M9 9h.01M15 9h.01"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <span class="name">Eficaz</span>
+        <span class="tagline">Controle de Pragas</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../index.html#servicos">Serviços</a>
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="index.html" class="active">Blog</a>
+      <a href="../area-cliente.html">Área do Cliente</a>
+    </nav>
+
+    <a href="https://wa.me/5533984568403" class="btn-primary" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Solicitar Orçamento
+    </a>
+  </div>
+</header>
+
+<!-- ===== BREAKING BAR ===== -->
+<div class="breaking-bar">
+  <div class="inner">
+    <span class="breaking-label">DICA</span>
+    <span class="breaking-text">Prevenção é mais barata que o tratamento — saiba como proteger sua casa antes das chuvas.
+      <a href="post.html">Leia o guia completo →</a>
+    </span>
+  </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="site-main" role="main">
+  <div class="blog-content">
+
+    <!-- FEATURED POST -->
+    <article class="featured-post">
+      <div class="thumb">
+        <span class="thumb-placeholder">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+          </svg>
+        </span>
+      </div>
+      <div class="content">
+        <span class="cat-badge tecnico">Guia Técnico</span>
+        <h2><a href="post.html">Dedetização Profissional: O que Realmente Faz Diferença no Resultado</a></h2>
+        <p class="excerpt">Entenda por que apenas produtos certificados pela ANVISA, aplicados por técnicos habilitados, garantem segurança real para sua família e durabilidade no controle de pragas.</p>
+        <div class="post-meta">
+          <span class="date">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            15 Mai 2026
+          </span>
+          <span class="sep">·</span>
+          <span class="reading-time">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            6 min
+          </span>
+        </div>
+        <a href="post.html" class="read-more">Ler artigo completo →</a>
+      </div>
+    </article>
+
+    <!-- SECTION LABEL -->
+    <div class="section-label"><h2>Artigos Recentes</h2></div>
+
+    <!-- POSTS GRID -->
+    <div class="posts-grid">
+
+      <article class="post-card">
+        <div class="card-thumb">
+          <span class="thumb-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <span class="cat-badge prevencao">Prevenção</span>
+          <h3><a href="post.html">5 Sinais de que sua Casa Precisa Urgente de Dedetização</a></h3>
+          <p class="card-excerpt">Trilhas de formigas, roedores à vista, fezes de baratas — aprenda a identificar esses sinais antes que o problema tome conta.</p>
+          <div class="card-footer">
+            <span class="read-time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              4 min
+            </span>
+            <a href="post.html" class="read-more-link">Ler →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-thumb">
+          <span class="thumb-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <span class="cat-badge saude">Saúde</span>
+          <h3><a href="post.html">Dengue, Zika e Chikungunya: Como Eliminar o Aedes aegypti de Vez</a></h3>
+          <p class="card-excerpt">O mosquito Aedes precisa de apenas uma tampa de garrafa com água para se reproduzir. Veja como proteger seu imóvel de forma permanente.</p>
+          <div class="card-footer">
+            <span class="read-time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 min
+            </span>
+            <a href="post.html" class="read-more-link">Ler →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-thumb">
+          <span class="thumb-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <span class="cat-badge empresas">Empresas</span>
+          <h3><a href="post.html">Laudo de Dedetização para Alvarás e Vigilância Sanitária: Guia Completo</a></h3>
+          <p class="card-excerpt">Restaurantes, supermercados e clínicas precisam de laudo técnico atualizado. Saiba exatamente o que a Vigilância Sanitária exige.</p>
+          <div class="card-footer">
+            <span class="read-time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              7 min
+            </span>
+            <a href="post.html" class="read-more-link">Ler →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-thumb">
+          <span class="thumb-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <span class="cat-badge prevencao">Prevenção</span>
+          <h3><a href="post.html">Cupins na Madeira: Como Identificar a Infestação Antes que o Estrago Aconteça</a></h3>
+          <p class="card-excerpt">O cupim-de-madeira-seca age em silêncio por meses. Aprenda os sinais sutis que denunciam a presença desses insetos em telhados e móveis.</p>
+          <div class="card-footer">
+            <span class="read-time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 min
+            </span>
+            <a href="post.html" class="read-more-link">Ler →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-thumb">
+          <span class="thumb-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <span class="cat-badge legislacao">Legislação</span>
+          <h3><a href="post.html">RDC 622/2022 da ANVISA: O que Mudou no Controle de Pragas Urbanas</a></h3>
+          <p class="card-excerpt">A nova resolução da ANVISA exige comprovação de treinamento dos aplicadores e restringe o uso de certos produtos. Entenda o impacto no seu contrato.</p>
+          <div class="card-footer">
+            <span class="read-time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              6 min
+            </span>
+            <a href="post.html" class="read-more-link">Ler →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-thumb">
+          <span class="thumb-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <span class="cat-badge tecnico">Guia Técnico</span>
+          <h3><a href="post.html">Controle de Roedores: Por que Armadilhas Caseiras Nunca Resolvem o Problema</a></h3>
+          <p class="card-excerpt">Ratos e camundongos se reproduzem em ritmo acelerado. Uma fêmea produz até 10 ninhadas por ano. Entenda por que o manejo integrado é a única solução eficaz.</p>
+          <div class="card-footer">
+            <span class="read-time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 min
+            </span>
+            <a href="post.html" class="read-more-link">Ler →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-thumb">
+          <span class="thumb-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <span class="cat-badge empresas">Empresas</span>
+          <h3><a href="post.html">Plano Anual de Controle de Pragas: Quanto Custa e o que Está Incluído</a></h3>
+          <p class="card-excerpt">Um contrato anual preventivo sai até 60% mais barato do que tratamentos emergenciais. Veja o que avaliar antes de assinar com qualquer empresa.</p>
+          <div class="card-footer">
+            <span class="read-time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 min
+            </span>
+            <a href="post.html" class="read-more-link">Ler →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-thumb">
+          <span class="thumb-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <span class="cat-badge saude">Saúde</span>
+          <h3><a href="post.html">Alergia a Baratas: A Causa Silenciosa de Rinite e Asma em Crianças</a></h3>
+          <p class="card-excerpt">Fezes e partes do corpo da barata são potentes alérgenos. Pesquisas mostram que até 60% dos casos de asma urbana têm relação com a barata alemã.</p>
+          <div class="card-footer">
+            <span class="read-time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              4 min
+            </span>
+            <a href="post.html" class="read-more-link">Ler →</a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /posts-grid -->
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <span class="current">1</span>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">→</a>
+    </div>
+
+  </div><!-- /blog-content -->
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+
+    <div class="widget widget-cta">
+      <div class="widget-title">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:5px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14 15.82l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Solicitar Orçamento
+      </div>
+      <p>Atendemos Manhuaçu e região. Resposta em até 2h. Produtos ANVISA, laudo incluso.</p>
+      <form onsubmit="return false;">
+        <input type="text" placeholder="Seu nome">
+        <input type="tel" placeholder="WhatsApp: (33) 98456-8403">
+        <button type="submit">Quero orçamento grátis →</button>
+      </form>
+    </div>
+
+    <div class="widget">
+      <div class="widget-title">Artigos Recentes</div>
+      <div class="recent-list">
+        <div class="recent-item">
+          <div class="thumb">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div class="info">
+            <h4><a href="post.html">Dedetização Profissional: O que Faz Diferença no Resultado</a></h4>
+            <span class="meta">15 Mai 2026</span>
+          </div>
+        </div>
+        <div class="recent-item">
+          <div class="thumb">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/></svg>
+          </div>
+          <div class="info">
+            <h4><a href="post.html">Dengue: Como Eliminar o Aedes aegypti de Vez</a></h4>
+            <span class="meta">10 Mai 2026</span>
+          </div>
+        </div>
+        <div class="recent-item">
+          <div class="thumb">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+          </div>
+          <div class="info">
+            <h4><a href="post.html">Laudo para Vigilância Sanitária: Guia Completo</a></h4>
+            <span class="meta">05 Mai 2026</span>
+          </div>
+        </div>
+        <div class="recent-item">
+          <div class="thumb">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="info">
+            <h4><a href="post.html">RDC 622/2022 da ANVISA: O que Mudou</a></h4>
+            <span class="meta">28 Abr 2026</span>
+          </div>
+        </div>
+        <div class="recent-item">
+          <div class="thumb">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="info">
+            <h4><a href="post.html">Controle de Roedores: Por que Armadilhas Caseiras Falham</a></h4>
+            <span class="meta">20 Abr 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="widget-title">Categorias</div>
+      <div class="cat-list">
+        <div class="cat-list-item"><a href="#">Prevenção</a><span class="count">4</span></div>
+        <div class="cat-list-item"><a href="#">Saúde</a><span class="count">3</span></div>
+        <div class="cat-list-item"><a href="#">Guia Técnico</a><span class="count">3</span></div>
+        <div class="cat-list-item"><a href="#">Empresas</a><span class="count">2</span></div>
+        <div class="cat-list-item"><a href="#">Legislação</a><span class="count">2</span></div>
+      </div>
+    </div>
+
+  </aside>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="header-logo">
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#030E05" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M8 12s1.5-2 4-2 4 2 4 2"/>
+              <path d="M9 9h.01M15 9h.01"/>
+            </svg>
+          </div>
+          <div class="logo-wordmark">
+            <span class="name">Eficaz</span>
+            <span class="tagline">Controle de Pragas</span>
+          </div>
+        </a>
+        <p>Empresa especializada em controle de pragas urbanas para residências e empresas em Manhuaçu e região. Produtos ANVISA, laudos digitais incluso.</p>
+        <div class="footer-social">
+          <a href="#" title="Instagram">ig</a>
+          <a href="#" title="Facebook">fb</a>
+          <a href="https://wa.me/5533984568403" title="WhatsApp" target="_blank">wa</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="../index.html#servicos">Dedetização</a></li>
+          <li><a href="../index.html#servicos">Descupinização</a></li>
+          <li><a href="../index.html#servicos">Controle de Roedores</a></li>
+          <li><a href="../index.html#servicos">Sanitização</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="post.html">Guia de Prevenção</a></li>
+          <li><a href="post.html">Dengue e Mosquitos</a></li>
+          <li><a href="post.html">Para Empresas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5533984568403">(33) 98456-8403</a></li>
+          <li><a href="mailto:contato@eficaz.com.br">contato@eficaz.com.br</a></li>
+          <li><a href="#">Rua Anália Maria Dias, 210</a></li>
+          <li><a href="#">Bom Jardim — Manhuaçu MG</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Eficaz Controle de Pragas. Todos os direitos reservados.</p>
+      <p>Manhuaçu MG · Alvará Sanitário ativo · Técnicos ANVISA habilitados</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
