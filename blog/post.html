@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dedetização Profissional: O que Realmente Faz Diferença no Resultado — Eficaz</title>
+<meta name="description" content="Entenda por que apenas produtos certificados pela ANVISA, aplicados por técnicos habilitados com EPI correto, garantem segurança real para sua família e durabilidade no controle de pragas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --bg-base:        #030E05;
+  --bg-surface:     #061508;
+  --bg-elevated:    #0d2812;
+  --bg-glass:       rgba(255,255,255,0.04);
+
+  --green:          #2ECC52;
+  --green-hover:    #40D962;
+  --green-soft:     rgba(46,204,82,0.13);
+  --green-glow:     rgba(46,204,82,0.26);
+  --green-border:   rgba(46,204,82,0.32);
+
+  --white:          #FFFFFF;
+  --text-primary:   #E8F5EC;
+  --text-secondary: #7AAF87;
+  --text-muted:     #3D6647;
+
+  --border:         rgba(255,255,255,0.07);
+  --border-strong:  rgba(255,255,255,0.13);
+
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.45);
+  --shadow-btn:  0 4px 20px rgba(46,204,82,0.35);
+  --transition: 220ms ease;
+  --header-h:   68px;
+  --container:  1140px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-base);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+a { text-decoration: none; transition: color var(--transition); }
+
+/* HEADER */
+#header {
+  position: sticky; top: 0; left: 0; right: 0; z-index: 1000;
+  height: var(--header-h);
+  background: rgba(3,14,5,0.92);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+#header .container { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+.logo-icon {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--green), #1a9e3a);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.logo-wordmark .name { display: block; font-size: 17px; font-weight: 800; color: var(--white); letter-spacing: -0.3px; }
+.logo-wordmark .tagline { display: block; font-size: 10px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; text-transform: uppercase; }
+#header nav { display: flex; align-items: center; gap: 28px; }
+#header nav a { font-size: 14px; font-weight: 600; color: var(--text-secondary); transition: color var(--transition); }
+#header nav a:hover { color: var(--white); }
+#header nav a.active { color: var(--green); }
+.btn-primary {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, var(--green), var(--green-hover));
+  color: #030E05; font-weight: 700; font-size: 14px;
+  border-radius: var(--radius-full); white-space: nowrap;
+  box-shadow: var(--shadow-btn); transition: all var(--transition);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(46,204,82,0.45); color: #030E05; }
+
+/* SINGLE LAYOUT */
+.single-layout {
+  max-width: var(--container); margin: 0 auto; padding: 0 24px 80px;
+  display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: start;
+}
+
+/* POST HEADER */
+.post-header { padding: 48px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+.post-header .post-cats { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.post-header h1 {
+  font-size: clamp(28px, 4vw, 46px); font-weight: 800; color: var(--white);
+  line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px;
+}
+.post-header .post-meta { display: flex; align-items: center; gap: 14px; font-size: 12px; color: var(--text-muted); margin-bottom: 20px; }
+.post-header .post-excerpt {
+  font-size: 18px; color: var(--text-secondary); line-height: 1.7;
+  max-width: 680px; padding-bottom: 24px; border-bottom: 1px solid var(--border);
+}
+
+/* FEATURED IMAGE */
+.post-featured-image {
+  margin-bottom: 40px; border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid var(--border); background: var(--bg-elevated);
+  aspect-ratio: 16/7; display: flex; align-items: center; justify-content: center;
+}
+.post-featured-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* POST CONTENT */
+.post-content { font-size: 17px; line-height: 1.8; color: var(--text-primary); }
+.post-content h2 {
+  font-size: clamp(22px, 2.5vw, 28px); font-weight: 800; color: var(--white);
+  margin: 48px 0 18px; letter-spacing: -0.5px; line-height: 1.2;
+  padding-top: 16px; border-top: 1px solid var(--border);
+}
+.post-content h3 { font-size: 20px; font-weight: 700; color: var(--white); margin: 32px 0 14px; line-height: 1.3; }
+.post-content h4 { font-size: 17px; font-weight: 700; color: var(--text-primary); margin: 24px 0 10px; }
+.post-content p { margin-bottom: 22px; }
+.post-content ul, .post-content ol { margin: 0 0 24px 24px; display: flex; flex-direction: column; gap: 8px; }
+.post-content ul li::marker { color: var(--green); }
+.post-content ol li::marker { color: var(--green); font-weight: 700; }
+.post-content strong { color: var(--white); font-weight: 700; }
+.post-content a { color: var(--green); border-bottom: 1px solid var(--green-border); }
+.post-content a:hover { color: var(--green-hover); border-color: var(--green); }
+.post-content blockquote {
+  border-left: 3px solid var(--green); padding: 20px 24px; margin: 32px 0;
+  background: var(--bg-elevated); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 18px; font-style: italic; color: var(--text-secondary);
+}
+.post-content blockquote p { margin: 0; }
+
+/* HIGHLIGHT BOX */
+.highlight-box {
+  background: rgba(46,204,82,0.06); border: 1px solid rgba(46,204,82,0.22);
+  border-left: 3px solid var(--green); border-radius: 10px; padding: 20px 24px; margin: 28px 0;
+}
+.highlight-box strong { display: block; font-size: 13px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+.highlight-box ul { margin: 0; padding-left: 18px; }
+.highlight-box li { font-size: 15px; color: var(--text-secondary); margin-bottom: 6px; }
+.highlight-box li::marker { color: var(--green); }
+
+/* PULL QUOTE */
+.pull-quote { border-left: 3px solid var(--green); padding: 20px 24px; margin: 32px 0; background: var(--bg-elevated); border-radius: 0 10px 10px 0; font-size: 18px; font-style: italic; color: var(--text-secondary); }
+.pull-quote p { margin: 0; }
+
+/* POST FIGURE */
+.post-figure { margin: 28px 0; padding: 16px; background: rgba(13,40,18,0.8); border: 1px dashed rgba(46,204,82,0.28); border-radius: 10px; text-align: center; color: var(--text-muted); font-size: 13px; font-style: italic; }
+
+/* POST DECK */
+.post-deck { font-size: 18px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px; }
+
+/* IN-POST CTA */
+.in-post-cta {
+  margin: 48px 0; padding: 32px 36px; background: var(--bg-elevated);
+  border: 1px solid var(--green-border); border-radius: var(--radius-lg);
+  display: flex; align-items: center; gap: 24px; position: relative; overflow: hidden;
+}
+.in-post-cta::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--green), var(--green-hover), transparent); }
+.in-post-cta .cta-icon { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+.in-post-cta .cta-text { flex: 1; }
+.in-post-cta .cta-text strong { display: block; font-size: 17px; font-weight: 800; color: var(--white); margin-bottom: 4px; }
+.in-post-cta .cta-text span { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+.in-post-cta .cta-btn { padding: 12px 24px; background: linear-gradient(135deg, var(--green), var(--green-hover)); color: #030E05; font-weight: 700; font-size: 14px; border-radius: var(--radius-full); white-space: nowrap; flex-shrink: 0; box-shadow: var(--shadow-btn); transition: all var(--transition); }
+.in-post-cta .cta-btn:hover { color: #030E05; transform: translateY(-2px); }
+
+/* POST TAGS */
+.post-tags { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 28px 0; border-top: 1px solid var(--border); margin-top: 40px; }
+.post-tags .label { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+.post-tag { padding: 4px 12px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: var(--radius-full); font-size: 12px; color: var(--text-secondary); transition: all var(--transition); }
+.post-tag:hover { border-color: var(--green-border); color: var(--green); background: var(--green-soft); }
+
+/* SECTION LABEL */
+.section-label { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.section-label h2 { font-size: 14px; font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: 1.2px; white-space: nowrap; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* RELATED POSTS */
+.related-posts { margin-top: 48px; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.post-card { background: var(--bg-glass); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: all 250ms ease; display: flex; flex-direction: column; backdrop-filter: blur(8px); }
+.post-card:hover { transform: translateY(-4px); border-color: var(--green-border); box-shadow: var(--shadow-card); }
+.post-card .card-thumb { aspect-ratio: 16/9; background: linear-gradient(135deg, #0d2812, #061508); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+.post-card .card-thumb .thumb-placeholder { display:flex; align-items:center; justify-content:center; opacity: 0.65; }
+.post-card .card-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.post-card h3 { font-size: 14px; font-weight: 700; line-height: 1.35; flex: 1; }
+.post-card h3 a { color: var(--white); }
+.post-card h3 a:hover { color: var(--green); }
+.post-card .card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-muted); margin-top: auto; }
+.read-more-link { font-size: 13px; font-weight: 700; color: var(--green); }
+.read-more-link:hover { color: var(--green-hover); }
+
+/* CATEGORY BADGES */
+.cat-badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: var(--radius-full); font-size: 11px; font-weight: 700; letter-spacing: 0.3px; white-space: nowrap; }
+.cat-badge.prevencao  { background: rgba(104,211,145,0.15); color: #68D391; border: 1px solid rgba(104,211,145,0.25); }
+.cat-badge.saude      { background: rgba(99,179,237,0.15);  color: #63B3ED; border: 1px solid rgba(99,179,237,0.25); }
+.cat-badge.legislacao { background: rgba(252,129,129,0.15); color: #FC8181; border: 1px solid rgba(252,129,129,0.25); }
+.cat-badge.tecnico    { background: rgba(46,204,82,0.13);   color: #2ECC52; border: 1px solid rgba(46,204,82,0.3); }
+.cat-badge.empresas   { background: rgba(246,173,85,0.15);  color: #F6AD55; border: 1px solid rgba(246,173,85,0.25); }
+
+/* SIDEBAR */
+.sidebar { display: flex; flex-direction: column; gap: 28px; padding-top: 48px; }
+.widget { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; }
+.widget-title { font-size: 12px; font-weight: 800; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.widget-cta { border: 1px solid var(--green-border); position: relative; overflow: hidden; }
+.widget-cta::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--green), var(--green-hover), transparent); }
+.widget-cta .widget-title { color: var(--green); border-color: var(--green-border); }
+.widget-cta p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+.widget-cta form { display: flex; flex-direction: column; gap: 10px; }
+.widget-cta input { width: 100%; padding: 10px 14px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: 13px; font-family: inherit; transition: border-color var(--transition); }
+.widget-cta input:focus { outline: none; border-color: var(--green-border); }
+.widget-cta input::placeholder { color: var(--text-muted); }
+.widget-cta button { width: 100%; padding: 12px; background: linear-gradient(135deg, var(--green), var(--green-hover)); color: #030E05; font-weight: 700; font-size: 14px; border: none; border-radius: var(--radius-full); cursor: pointer; transition: all var(--transition); font-family: inherit; }
+.widget-cta button:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(46,204,82,0.4); }
+.recent-list { display: flex; flex-direction: column; gap: 14px; }
+.recent-item { display: flex; align-items: flex-start; gap: 12px; }
+.recent-item .thumb { width: 48px; height: 48px; background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.recent-item .info h4 { font-size: 13px; font-weight: 700; line-height: 1.4; margin-bottom: 4px; }
+.recent-item .info h4 a { color: var(--text-primary); }
+.recent-item .info h4 a:hover { color: var(--green); }
+.recent-item .info .meta { font-size: 11px; color: var(--text-muted); }
+.cat-list { display: flex; flex-direction: column; gap: 6px; }
+.cat-list-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; background: var(--bg-glass); border: 1px solid var(--border); border-radius: var(--radius-md); transition: all var(--transition); }
+.cat-list-item:hover { border-color: var(--green-border); background: var(--green-soft); }
+.cat-list-item a { font-size: 13px; font-weight: 600; color: var(--text-secondary); flex: 1; }
+.cat-list-item:hover a { color: var(--green); }
+.cat-list-item .count { font-size: 11px; font-weight: 700; color: var(--text-muted); background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-full); padding: 1px 7px; }
+
+/* FOOTER */
+.site-footer { background: #020A04; border-top: 1px solid rgba(255,255,255,0.08); padding: 64px 0 28px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-brand p { font-size: 14px; color: var(--text-muted); line-height: 1.65; max-width: 280px; margin: 16px 0 20px; }
+.footer-social { display: flex; gap: 8px; }
+.footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 13px; font-weight: 700; transition: all var(--transition); }
+.footer-social a:hover { border-color: var(--green-border); color: var(--green); background: var(--green-soft); }
+.footer-col h4 { font-size: 12px; font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 16px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a { font-size: 14px; color: var(--text-muted); transition: color var(--transition); }
+.footer-col ul li a:hover { color: var(--green); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-bottom p { font-size: 12px; color: var(--text-muted); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .single-layout { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  #header nav { display: none; }
+  .related-grid { grid-template-columns: 1fr; }
+  .in-post-cta { flex-direction: column; text-align: center; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="container">
+    <a href="../index.html" class="header-logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#030E05" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <path d="M8 12s1.5-2 4-2 4 2 4 2"/>
+          <path d="M9 9h.01M15 9h.01"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <span class="name">Eficaz</span>
+        <span class="tagline">Controle de Pragas</span>
+      </div>
+    </a>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../index.html#servicos">Serviços</a>
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="index.html" class="active">Blog</a>
+      <a href="../area-cliente.html">Área do Cliente</a>
+    </nav>
+    <a href="https://wa.me/5533984568403" class="btn-primary" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Solicitar Orçamento
+    </a>
+  </div>
+</header>
+
+<!-- ===== SINGLE LAYOUT ===== -->
+<div class="single-layout">
+  <article>
+
+    <div class="post-header">
+      <div class="post-cats">
+        <span class="cat-badge tecnico">Guia Técnico</span>
+        <span class="cat-badge prevencao">Prevenção</span>
+      </div>
+      <h1>Dedetização Profissional: O que Realmente Faz Diferença no Resultado</h1>
+      <div class="post-meta">
+        <span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          15 Mai 2026
+        </span>
+        <span>·</span>
+        <span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          6 min de leitura
+        </span>
+        <span>·</span>
+        <span>Equipe Eficaz</span>
+      </div>
+      <p class="post-excerpt">Entenda por que apenas produtos certificados pela ANVISA, aplicados por técnicos habilitados com EPI correto, garantem segurança real para sua família e durabilidade no controle de pragas.</p>
+    </div>
+
+    <div class="post-featured-image">
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.18">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+      </svg>
+    </div>
+
+    <div class="post-content">
+
+      <p class="post-deck"><em>Muitas empresas oferecem dedetização barata. Poucas entregam o que realmente importa: segurança, documentação e resultado que dura.</em></p>
+
+      <p>Quando o assunto é controle de pragas, existe uma diferença enorme entre "aplicar produto" e "resolver o problema". Essa distinção costuma aparecer apenas semanas depois do serviço — quando as baratas voltam, quando a Vigilância Sanitária reprova o laudo, ou quando um familiar tem reação alérgica a um produto não homologado.</p>
+
+      <p>A Eficaz existe exatamente para eliminar essa incerteza. Neste artigo, vamos detalhar o que um serviço profissional de controle de pragas inclui de verdade — e por que esses fatores fazem toda a diferença no resultado final.</p>
+
+      <h2>Por que Produto Barato Custa Caro</h2>
+
+      <div class="post-figure">
+        Técnico aplicando produto em residência com EPI completo — máscara, luvas e macacão
+      </div>
+
+      <p>O mercado é inundado por produtos vendidos em mercados e lojas de construção que prometem eliminar pragas com uma única aplicação. A realidade é que a grande maioria desses produtos tem concentração insuficiente para ciclos completos de infestação e não age nas fases de ovo e larva.</p>
+
+      <p>Além disso, a aplicação caseira raramente atinge os focos primários — frestas internas de móveis, ductos de instalações hidráulicas, caixas de gordura e espaços atrás de azulejos. Esses pontos são os verdadeiros "abrigos" que sustentam a reinfestação.</p>
+
+      <div class="highlight-box">
+        <strong>O que diferencia um serviço profissional</strong>
+        <ul>
+          <li>Produtos registrados e aprovados pela ANVISA (RDC 622/2022).</li>
+          <li>Técnicos com certificado de treinamento específico por categoria de praga.</li>
+          <li>EPI completo: máscara, luvas, macacão e respirador com filtro químico.</li>
+          <li>Diagnóstico prévio para identificar espécies e intensidade da infestação.</li>
+          <li>Laudo técnico com validade legal para órgãos públicos e Vigilância Sanitária.</li>
+          <li>Garantia contratual de revisão sem custo adicional dentro do prazo.</li>
+        </ul>
+      </div>
+
+      <h2>Como Funciona o Diagnóstico Antes do Serviço</h2>
+
+      <p>Todo serviço da Eficaz começa com uma vistoria técnica no imóvel. Nessa etapa, o técnico identifica as espécies presentes, mapeia os focos de infestação, avalia o grau de comprometimento do ambiente e define o protocolo mais adequado para cada situação.</p>
+
+      <p>Essa etapa é ignorada por empresas que chegam com o mesmo "kit padrão" independente do problema. Tratar uma infestação de cupim-de-madeira-seca com o mesmo produto usado em baratas não funciona — são biologia, comportamento e vulnerabilidade completamente diferentes.</p>
+
+      <blockquote>
+        <p>Controle de pragas eficaz não começa com a aplicação. Começa com o diagnóstico correto da espécie e do grau de infestação.</p>
+      </blockquote>
+
+      <h2>Os 4 Pilares de um Serviço que Funciona</h2>
+
+      <h3>1. Produto Certo para a Praga Certa</h3>
+      <p>Baratas alemãs respondem melhor a iscas gel do que a inseticidas de contato. Cupins subterrâneos exigem tratamento do solo com termiticidas de ação residual. Roedores precisam de gestão de pontos de acesso além das iscas.</p>
+      <p>Um técnico qualificado conhece esses protocolos. Um produto de prateleira não tem como substituir esse conhecimento.</p>
+
+      <h3>2. Cobertura Total dos Focos</h3>
+      <p>A aplicação precisa alcançar os pontos que o olho não vê: interior de caixas de gordura, espaços entre piso e rodapé, face interna de armários de cozinha, câmara de inspeção das instalações hidráulicas. Esses são os locais onde as pragas se abrigam, se reproduzem e de onde partem toda noite.</p>
+
+      <h3>3. Documentação com Validade Legal</h3>
+      <p>Para estabelecimentos comerciais, o laudo de controle de vetores é documento obrigatório para renovação de alvará sanitário. Esse laudo só tem validade legal quando emitido por empresa licenciada na Vigilância Sanitária local, com registro do técnico responsável e referência ao produto utilizado.</p>
+
+      <h3>4. Acompanhamento Pós-Serviço</h3>
+      <p>Pragas não desaparecem do dia para a noite após o tratamento. Ovos resistem por semanas. A eficácia do serviço deve ser avaliada após 15 a 30 dias, e revisões preventivas dentro do prazo de garantia são parte do protocolo profissional.</p>
+
+      <div class="in-post-cta">
+        <div class="cta-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14 15.82l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="cta-text">
+          <strong>Quer uma vistoria gratuita no seu imóvel?</strong>
+          <span>Atendemos Manhuaçu e região. Orçamento sem compromisso, laudo ANVISA incluso, garantia contratual.</span>
+        </div>
+        <a href="https://wa.me/5533984568403" class="cta-btn" target="_blank">Falar no WhatsApp →</a>
+      </div>
+
+      <h2>Quanto Tempo Dura o Efeito?</h2>
+
+      <p>Depende da praga, do produto e do ambiente. De forma geral:</p>
+      <ul>
+        <li><strong>Baratas:</strong> 3 a 6 meses com inseticida de ação residual aplicado corretamente.</li>
+        <li><strong>Formigas:</strong> 2 a 4 meses, dependendo do tipo de colônia e espécie.</li>
+        <li><strong>Roedores:</strong> controle contínuo é mais eficaz do que tratamentos pontuais.</li>
+        <li><strong>Cupins:</strong> tratamento de madeira pode durar 5 a 10 anos; solo, até 15 anos.</li>
+        <li><strong>Mosquitos (Aedes aegypti):</strong> 30 a 60 dias; reinfestação depende de novos focos de água parada.</li>
+      </ul>
+
+      <p>Para ambientes comerciais com alto fluxo de pessoas e abastecimento constante de mercadorias, um <strong>plano anual com visitas periódicas</strong> é sempre mais eficaz — e mais econômico — do que tratamentos emergenciais.</p>
+
+      <div class="highlight-box">
+        <strong>Sinais de que você precisa de vistoria imediata</strong>
+        <ul>
+          <li>Visualização de baratas ou roedores durante o dia (infestação grave).</li>
+          <li>Serragem fina abaixo de móveis ou estrutura de madeira (cupim ativo).</li>
+          <li>Odor forte e característico em armários ou debaixo de pias.</li>
+          <li>Manchas de gordura em rodapés ou azulejos de cozinha.</li>
+          <li>Trilhas contínuas de formigas dentro de casa, especialmente na cozinha.</li>
+        </ul>
+      </div>
+
+      <div class="in-post-cta">
+        <div class="cta-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+        </div>
+        <div class="cta-text">
+          <strong>Empresa? Solicite seu laudo digital para a Vigilância Sanitária.</strong>
+          <span>Emitimos laudos com validade legal em menos de 48h após o serviço. Acesso via portal do cliente.</span>
+        </div>
+        <a href="../area-cliente.html" class="cta-btn">Conhecer o portal →</a>
+      </div>
+
+    </div><!-- /post-content -->
+
+    <div class="post-tags">
+      <span class="label">Tags:</span>
+      <a href="#" class="post-tag">Dedetização</a>
+      <a href="#" class="post-tag">ANVISA</a>
+      <a href="#" class="post-tag">Controle de Pragas</a>
+      <a href="#" class="post-tag">Manhuaçu</a>
+      <a href="#" class="post-tag">Vigilância Sanitária</a>
+    </div>
+
+    <section class="related-posts">
+      <div class="section-label"><h2>Artigos Relacionados</h2></div>
+      <div class="related-grid">
+        <article class="post-card">
+          <div class="card-thumb"><span class="thumb-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/></svg></span></div>
+          <div class="card-body">
+            <span class="cat-badge saude">Saúde</span>
+            <h3><a href="post.html">Dengue: Como Eliminar o Aedes aegypti de Vez</a></h3>
+            <div class="card-footer"><span>5 min</span><a href="post.html" class="read-more-link">Ler →</a></div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="card-thumb"><span class="thumb-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></span></div>
+          <div class="card-body">
+            <span class="cat-badge empresas">Empresas</span>
+            <h3><a href="post.html">Laudo para Vigilância Sanitária: Guia Completo</a></h3>
+            <div class="card-footer"><span>7 min</span><a href="post.html" class="read-more-link">Ler →</a></div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="card-thumb"><span class="thumb-placeholder"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></span></div>
+          <div class="card-body">
+            <span class="cat-badge prevencao">Prevenção</span>
+            <h3><a href="post.html">Cupins na Madeira: Como Identificar Antes que o Estrago Aconteça</a></h3>
+            <div class="card-footer"><span>5 min</span><a href="post.html" class="read-more-link">Ler →</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="widget widget-cta">
+      <div class="widget-title">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:5px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14 15.82l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Solicitar Orçamento
+      </div>
+      <p>Atendemos Manhuaçu e região. Resposta em até 2h. Produtos ANVISA, laudo incluso.</p>
+      <form onsubmit="return false;">
+        <input type="text" placeholder="Seu nome">
+        <input type="tel" placeholder="WhatsApp">
+        <button type="submit">Quero orçamento grátis →</button>
+      </form>
+    </div>
+    <div class="widget">
+      <div class="widget-title">Artigos Recentes</div>
+      <div class="recent-list">
+        <div class="recent-item">
+          <div class="thumb"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="info"><h4><a href="post.html">5 Sinais de que sua Casa Precisa de Dedetização</a></h4><span class="meta">12 Mai 2026</span></div>
+        </div>
+        <div class="recent-item">
+          <div class="thumb"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="info"><h4><a href="post.html">RDC 622/2022 da ANVISA: O que Mudou no Controle de Pragas</a></h4><span class="meta">28 Abr 2026</span></div>
+        </div>
+        <div class="recent-item">
+          <div class="thumb"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <div class="info"><h4><a href="post.html">Controle de Roedores: Por que Armadilhas Caseiras Falham</a></h4><span class="meta">20 Abr 2026</span></div>
+        </div>
+        <div class="recent-item">
+          <div class="thumb"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ECC52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/></svg></div>
+          <div class="info"><h4><a href="post.html">Alergia a Baratas: Causa Silenciosa de Asma em Crianças</a></h4><span class="meta">15 Abr 2026</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="widget">
+      <div class="widget-title">Categorias</div>
+      <div class="cat-list">
+        <div class="cat-list-item"><a href="#">Prevenção</a><span class="count">4</span></div>
+        <div class="cat-list-item"><a href="#">Saúde</a><span class="count">3</span></div>
+        <div class="cat-list-item"><a href="#">Guia Técnico</a><span class="count">3</span></div>
+        <div class="cat-list-item"><a href="#">Empresas</a><span class="count">2</span></div>
+        <div class="cat-list-item"><a href="#">Legislação</a><span class="count">2</span></div>
+      </div>
+    </div>
+  </aside>
+
+</div><!-- /single-layout -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="header-logo">
+          <div class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#030E05" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12s1.5-2 4-2 4 2 4 2"/><path d="M9 9h.01M15 9h.01"/></svg></div>
+          <div class="logo-wordmark"><span class="name">Eficaz</span><span class="tagline">Controle de Pragas</span></div>
+        </a>
+        <p>Empresa especializada em controle de pragas urbanas para residências e empresas em Manhuaçu e região. Produtos ANVISA, laudos digitais incluso.</p>
+        <div class="footer-social">
+          <a href="#" title="Instagram">ig</a>
+          <a href="#" title="Facebook">fb</a>
+          <a href="https://wa.me/5533984568403" title="WhatsApp" target="_blank">wa</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="../index.html#servicos">Dedetização</a></li>
+          <li><a href="../index.html#servicos">Descupinização</a></li>
+          <li><a href="../index.html#servicos">Controle de Roedores</a></li>
+          <li><a href="../index.html#servicos">Sanitização</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="post.html">Guia de Prevenção</a></li>
+          <li><a href="post.html">Dengue e Mosquitos</a></li>
+          <li><a href="post.html">Para Empresas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5533984568403">(33) 98456-8403</a></li>
+          <li><a href="mailto:contato@eficaz.com.br">contato@eficaz.com.br</a></li>
+          <li><a href="#">Rua Anália Maria Dias, 210</a></li>
+          <li><a href="#">Bom Jardim — Manhuaçu MG</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Eficaz Controle de Pragas. Todos os direitos reservados.</p>
+      <p>Manhuaçu MG · Alvará Sanitário ativo · Técnicos ANVISA habilitados</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
